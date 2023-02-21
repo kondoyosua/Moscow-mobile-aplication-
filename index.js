@@ -1,50 +1,64 @@
-let people = ["Greg", "Mary", "Devon", "James"];
+// // Spread Operator membuka array
+//  let numbers = [1, 2, 3, 4, 5];
 
-//1
-for (let i= 0; i <people.length; i++) {
-    console.log(people[i]);
-}
+// //  console.log(numbers);
+// //  console.log(...numbers);
 
-//2 
-people.forEach(function(value){
-    console.log(value);
-})
+// // 1. duplikasi array
+// let numbers2 = [...numbers];
+// number.push(6);
+// console.log(numbers2);
+// menambahkan objek
+// let john = {
+//     fullname: "John Doe",
+//     age: 33,
+//     address: "Manado",
+// };
 
-//3
-people.shift();
-console.log(people);
+// john = {
+//     ...john,
+//     job: "Teacher",
+// };
 
-//4
-people.pop();
-console.log(people);
+// console.log(john);
 
-//5 
-people.unshift("Matt");
-console.log(people);
+// mengabungkan objek
+// let obj1 = {
+//     a: 1,
+//     b: 2,
+// };
+// let obj2 = {
+//     c: 3,
+//     d: 4,
+// };
 
-//6
-people.push("Zuan Todindatu");
-console.log(people);
+// let combobj = {
+//     ...obj1,
+//     ...obj2,
+// };
+// console.log(combobj);
 
-//7
-for (let i= 0; i <people.length; i++) {
-    console.log(people[i]);
-    if (people[i] === "Marry") {
-        break
-    }
-}
+// Destructuring
 
-//8
-let orang = people.slice(2);
-console.log(orang);
+// let numbers = [1, 2, 3, 4, 5];
 
-//9 
-people.splice(2, 1, "Elizabeth", "Artie")
-console.log(people);
+// let [a, b, c, d, e] = numbers;
+// let [, x, ,y] = numbers;
+// console.log(a);
+// console.log(x, y);
 
-//10 
-let withBob = people.slice();
-console.log(withBob);
+// destructuring objek
 
-withBob.push("Bob");
-console.log(withBob);
+let john = {
+    fullname: "John doe",
+    age: 33,
+    address: "Manado",
+};
+// let { fullname, age, address } = john;
+// console.log(fullname, age, address);
+
+let ucapkansalam = ({fullname}) => {
+    let kalimat = `halo nama saya ${fullname}`;
+    console.log(kalimat);
+};
+ucapkansalam(john);
